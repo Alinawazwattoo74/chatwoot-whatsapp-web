@@ -33,7 +33,7 @@ RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
     && chown -R pptruser:pptruser /usr/local
 
 COPY package.json package-lock.json ./
-COPY . .
+
 
 
 RUN echo "user=pptruser" >> ~/.npmrc && npm cache clean --force
