@@ -9,7 +9,7 @@ services:
     working_dir: /home/pptruser
     restart: always
     ports:
-      - 9090:9090
+      - 80:80
     volumes:
       - .:/home/pptruser
     networks:
