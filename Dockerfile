@@ -35,7 +35,8 @@ RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
 COPY package.json package-lock.json ./
 EXPOSE 9090
 
-RUN echo "user=pptruser" >> ~/.npmrc && npm cache clean --force
+RUN npm --global config set user pptruser \
+    && npm cache clean --force
 
 RUN npm i puppeteer -g
 RUN npm install
