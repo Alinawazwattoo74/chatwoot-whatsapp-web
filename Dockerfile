@@ -41,7 +41,7 @@ RUN echo "user=pptruser" >> ~/.npmrc && npm cache clean --force
 RUN npm i puppeteer -g
 RUN npm install
 
-EXPOSE 80
+EXPOSE 8080
 ENTRYPOINT ["/bin/sh", "-c" , "npm install && npm run start"]
 
 
