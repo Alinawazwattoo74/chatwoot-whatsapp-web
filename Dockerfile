@@ -39,7 +39,8 @@ RUN echo "user=pptruser" >> ~/.npmrc && npm cache clean --force
 
 RUN npm i puppeteer -g
 RUN npm install
+EXPOSE 9090
 
 ENTRYPOINT ["/bin/sh", "-c" , "npm install && npm run start"]
 
-EXPOSE 9090
+
